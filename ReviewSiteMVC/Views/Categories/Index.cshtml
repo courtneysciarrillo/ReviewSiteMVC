@@ -9,44 +9,50 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Destination)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Accommodations)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Transportation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Activities)
-        </th>*@
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Destination)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Accommodations)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Transportation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Activities)
-        </td>*@
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CategoryId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryId }) |
-            @Html.ActionLink("Review", "Create", "Reviews")
-        </td>
-    </tr>
+<div class="row">
+    <div class="col-md-2">
+        <b>@Html.DisplayNameFor(model => model.Destination)</b>
+    </div>
+
+    <div class="col-md-2">
+        <b>@Html.DisplayNameFor(model => model.Accommodations)</b>
+    </div>
+
+    <div class="col-md-2">
+        <b>@Html.DisplayNameFor(model => model.Transportation)</b>
+    </div>
+
+    <div class="col-md-2">
+        <b>@Html.DisplayNameFor(model => model.Activities)</b>
+    </div>
+
+</div><br />
+
+@foreach (var item in Model)
+{
+      <div class="row">
+          <div class="col-md-2">
+              @Html.DisplayFor(modelItem => item.Destination)
+          </div>
+
+          <div class="col-md-2">
+              @Html.DisplayFor(modelItem => item.Accommodations)
+          </div>
+
+          <div class="col-md-2">
+              @Html.DisplayFor(modelItem => item.Transportation)
+          </div>
+
+          <div class="col-md-2">
+              @Html.DisplayFor(modelItem => item.Activities)
+          </div>
+
+          <div class="col-md-3">
+              @Html.ActionLink("Edit", "Edit", new { id = item.CategoryId }) |
+              @Html.ActionLink("Details", "Details", new { id = item.CategoryId }) |
+              @Html.ActionLink("Delete", "Delete", new { id = item.CategoryId })
+          </div>
+      </div>
+    <hr />
 }
-
-</table>

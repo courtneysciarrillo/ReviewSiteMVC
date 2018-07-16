@@ -4,54 +4,54 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Reviews</h2>
+<!-- Customizing Navbar -->
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Destination)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </th>
-        <th></th>
-    </tr>
+<style type="text/css">
+    body {
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+    }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Destination)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewId })
-        </td>
-    </tr>
-}
+    nav {
+        background-color: lightseagreen;
+    }
+</style>
 
-</table>
+<!-- Using rows and columns -->
+
+<div class="row">
+    <div class="col-lg rev-head">
+        <h2 id="rev-h2"> Reviews </h2>
+
+        <button class="button" id="rev-btn"> @Html.ActionLink("Create New", "Create") </button>
+    </div>
+</div>
+
+<!-- Setting up "cards" display -->
+
+<div class="row">
+    <div class="col-lg rev-cards">
+
+        @foreach (var item in Model)
+        {
+        <div class="card" id="rev-card">
+            <h4 id="rev-h4">
+                @Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(modelItem => item.Title)
+            </h4>
+
+            <p>
+                @Html.DisplayNameFor(model => model.Category.Destination): @Html.DisplayFor(modelItem => item.Category.Destination)
+            </p>
+
+            <div class="card-captions" id="rev-card-captions">
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ReviewId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ReviewId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ReviewId })
+                </p>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>

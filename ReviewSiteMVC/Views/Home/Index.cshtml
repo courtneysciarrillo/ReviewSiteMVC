@@ -2,30 +2,56 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<!-- Customizing Navbar -->
+<style type="text/css">
+    body {
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    nav {
+        background-color: lightsteelblue;
+    }
+</style>
+
+<!-- Using rows and columns -->
+
+<div class="row">
+    <div class="col-lg">
+        <h1 id="home-h1">Digital Nomads Reviews Site</h1>
+        <p>In augue libero, maximus in est ut, semper commodo turpis. Maecenas non augue quis est imperdiet mollis sed ac nisl. Etiam sed dui vitae odio vulputate euismod et et metus. Nam mattis dapibus felis, et tincidunt augue varius ac. Morbi mattis justo dui, quis vehicula ante convallis eget. Maecenas vehicula ipsum non felis imperdiet, nec egestas mi maximus. In blandit, felis at efficitur pellentesque, nisl felis condimentum magna, sed porttitor est nisi vitae sapien.</p>
+    </div>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <div class="card">
+            <img class="home-img" src="~/Images/barcelona.jpg" />
+            <div class="details">
+                <h4 id="home-h4">Barcelona</h4>
+                <p>Spain</p>
+            </div>
+        </div>
     </div>
+
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <div class="card">
+            <img class="home-img" src="~/Images/buenos-aires.jpg" />
+            <div class="details">
+                <h4 id="home-h4">Buenos Aires</h4>
+                <p>Argentina, South America</p>
+            </div>
+        </div>
     </div>
+
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <div class="card">
+            <img class="home-img" src="~/Images/cape-town.jpg" />
+            <div class="details">
+                <h4 id="home-h4">Cape Town</h4>
+                <p>South Africa</p>
+            </div>
+        </div>
     </div>
+
 </div>

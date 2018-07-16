@@ -6,45 +6,61 @@
 
 <h2>Details</h2>
 
-<div>
     <h4>Category</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Destination)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Destination)
-        </dd>
+    <div class="dl-horizontal">
+        <div class="row">
+            <div class="col-lg">
+                <b>@Html.DisplayNameFor(model => model.Destination)</b>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Accommodations)
-        </dt>
+        <div class="row">
+            <div class="col-lg">
+                @Html.DisplayFor(model => model.Destination)
+            </div>
+        </div><br />
 
-        <dd>
-            @Html.DisplayFor(model => model.Accommodations)
-        </dd>
+        <div class="row">
+            <div class="col-lg">
+                <b>@Html.DisplayNameFor(model => model.Accommodations)</b>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Transportation)
-        </dt>
+        <div class="row">
+            <div class="col-lg">
+                @Html.DisplayFor(model => model.Accommodations)
+            </div>
+        </div><br />
 
-        <dd>
-            @Html.DisplayFor(model => model.Transportation)
-        </dd>
+        <div class="row">
+            <div class="col-lg">
+                <b>@Html.DisplayNameFor(model => model.Transportation)</b>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Activities)
-        </dt>
+        <div class="row">
+            <div class="col-lg">
+                @Html.DisplayFor(model => model.Transportation)
+            </div>
+        </div><br />
 
-        <dd>
-            @Html.DisplayFor(model => model.Activities)
-        </dd>
+        <div class="row">
+            <div class="col-lg">
+                <b>@Html.DisplayNameFor(model => model.Activities)</b>
+            </div>
+        </div>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        <div class="row">
+            <div class="col-lg">
+                @Html.DisplayFor(model => model.Activities)
+            </div>
+        </div><br />
+
+    </div>
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>

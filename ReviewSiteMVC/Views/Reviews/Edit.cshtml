@@ -4,13 +4,25 @@
     ViewBag.Title = "Edit";
 }
 
+<!-- Customizing Navbar -->
+<style type="text/css">
+    body {
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    nav {
+        background-color: lightseagreen;
+    }
+</style>
+
 <h2>Edit</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Review</h4>
         <hr />
